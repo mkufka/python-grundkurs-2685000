@@ -8,6 +8,10 @@ print("Hallo, " + name + "!")
 
 # Einlesen eines Integers und Umwandlung
 alter = input("Bitte geben Sie Ihr Alter ein: ")
+# check if the input is a number
+if not alter.isdigit():
+    print("Bitte geben Sie eine gültige Zahl ein.")
+    exit(1)
 alter = int(alter)
 print("Sie sind", alter, "Jahre alt.")
 print("Sie sind " + str(alter) + " Jahre alt.")
