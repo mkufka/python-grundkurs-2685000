@@ -32,12 +32,12 @@ class BankAccount:
         '''Gibt eine benutzerfreundliche Darstellung des Kontos zurück.'''
         return f"Kontoinhaber: {self.inhaber}, Kontonummer: {self.kontonummer}, Kontostand: {self.__kontostand} EUR"
 
-    def einzahlen(self, amount: float):
+    def einzahlen(self, amount: float) -> None:
         '''Fügt einen Betrag zum Kontostand hinzu.'''
         self.__kontostand += amount
         self.__protokoll.append(("einzahlen", amount))
 
-    def abheben(self, amount: float):
+    def abheben(self, amount: float) -> None:
         '''Zieht einen Betrag vom Kontostand ab.'''
         if amount > self.__kontostand:
             print("Nicht genügend Guthaben.")
